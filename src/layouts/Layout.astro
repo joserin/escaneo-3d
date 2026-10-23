@@ -1,0 +1,27 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "VECTOR | Levantamiento Digital y Escaneo 3D", 
+  description = "Convertimos plantas industriales e infraestructuras reales en modelos 3D y planos As-Built exactos con Matterport Pro3 y AutoCAD." 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-[#080d13] text-slate-100 font-sans antialiased selection:bg-orange-500 selection:text-white min-h-screen">
+    <slot />
+  </body>
+</html>

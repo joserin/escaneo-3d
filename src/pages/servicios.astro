@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/sections/Navbar';
+import { Icon } from '../components/ui/Icon';
+import { Button } from '../components/ui/Button';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<Layout title="VECTOR | Catálogo de Servicios de Escaneo y Modelado 3D">
+  
+  <Navbar client:load />
+
+  <main class="pt-20">
+    <section class="services-section" id="servicios">
+      <div class="services-inner">
+        <header class="section-heading services-heading">
+          <div>
+            <span class="section-kicker">
+              <i></i>
+              Catálogo de servicios
+            </span>
+            <h2>Datos precisos para decisiones de ingeniería.</h2>
+          </div>
+          <div class="services-intro">
+            <span>04 / CAPACIDADES</span>
+            <p>
+              Documentamos el estado real de sus activos y convertimos cada
+              captura en información técnica lista para operar.
+            </p>
+          </div>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-card-head">
+              <span>SRV–01</span>
+              <b>CAPTURA</b>
+            </div>
+            <div class="service-icon">
+              <Icon name="scan" size={26} />
+              <span class="service-scan-ring" />
+            </div>
+            <div class="service-index">01</div>
+            <h3>Escaneo Láser y Nubes de Puntos</h3>
+            <p>
+              Captura dimensional precisa de plantas industriales, estructuras
+              y equipos en operación.
+            </p>
+            <div class="service-spec">
+              <span>OUTPUT</span>
+              <b>E57 · RCP · XYZ</b>
+            </div>
+            <a href="/contacto">
+              <Button variant="link">
+                Saber más
+                <Icon name="arrow" size={17} />
+              </Button>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-head">
+              <span>SRV–02</span>
+              <b>MODELADO</b>
+            </div>
+            <div class="service-icon">
+              <Icon name="layers" size={26} />
+              <span class="service-layer layer-one" />
+              <span class="service-layer layer-two" />
+            </div>
+            <div class="service-index">02</div>
+            <h3>Modelado BIM / As-Built</h3>
+            <p>
+              Generación de planos CAD 2D y modelos 3D coordinados a partir de
+              nubes de puntos reales.
+            </p>
+            <div class="service-spec">
+              <span>OUTPUT</span>
+              <b>DWG · RVT · IFC</b>
+            </div>
+            <a href="/contacto">
+              <Button variant="link">
+                Saber más
+                <Icon name="arrow" size={17} />
+              </Button>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-card-head">
+              <span>SRV–03</span>
+              <b>INSPECCIÓN</b>
+            </div>
+            <div class="service-icon">
+              <Icon name="route" size={26} />
+              <span class="service-route-dot dot-one" />
+              <span class="service-route-dot dot-two" />
+            </div>
+            <div class="service-index">03</div>
+            <h3>Inspección Remota y Recorridos Virtuales</h3>
+            <p>
+              Facilite auditorías, visitas técnicas y validaciones de sus
+              instalaciones sin desplazamientos.
+            </p>
+            <div class="service-spec">
+              <span>ACCESO</span>
+              <b>WEB · 24 / 7</b>
+            </div>
+            <a href="/contacto">
+              <Button variant="link">
+                Saber más
+                <Icon name="arrow" size={17} />
+              </Button>
+            </a>
+          </article>
+        </div>
+
+        <div class="services-footer">
+          <span>¿Requiere un alcance especializado?</span>
+          <a href="/contacto">
+            <Button variant="secondary" className="services-cta">
+              Hablemos de su proyecto
+              <Icon name="arrow" size={17} />
+            </Button>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

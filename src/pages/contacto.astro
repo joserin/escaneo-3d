@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/sections/Navbar.tsx';
+import QuoteForm from '../components/interactive/QuoteForm.tsx';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<Layout title="VECTOR | Solicitar Cotización y Contacto">
+  
+  <Navbar client:load />
+
+  <main class="pt-20">
+    <section class="quote-section" id="cotizacion">
+      <QuoteForm client:visible />
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,0 +1,196 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/sections/Navbar';
+import { Icon } from '../components/ui/Icon';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<Layout title="VECTOR | Tecnología y Equipamiento 3D">
+  
+  <Navbar client:load />
+
+  <main class="pt-15">
+    <section class="technology-section" id="tecnologia">
+      <div class="technology-inner">
+        
+        <!-- Cabecera de la sección -->
+        <div class="section-heading">
+          <div>
+            <span class="section-kicker">
+              <i></i>
+              Tecnología y equipamiento
+            </span>
+            <h2>Del espacio físico al modelo digital.</h2>
+          </div>
+          <p>
+            Un ecosistema integrado de captura LiDAR y modelado CAD para
+            documentar instalaciones complejas con datos confiables y de alta precisión.
+          </p>
+        </div>
+
+        <!-- Grid de Tarjetas (Hardware y Software) -->
+        <div class="technology-grid">
+          
+          <!-- Tarjeta 1: Hardware / Matterport Pro3 -->
+          <article class="tech-card hardware-card">
+            <div class="card-code">
+              <span>HARDWARE / 01</span>
+              <b>CAPTURA</b>
+            </div>
+
+            <div class="tech-visual scanner-visual" aria-hidden="true">
+              <div class="scanner-orbit orbit-one"></div>
+              <div class="scanner-orbit orbit-two"></div>
+              <div class="scanner-beam"></div>
+              <div class="scanner-device">
+                <span class="scanner-lens"></span>
+                <span class="scanner-sensor left"></span>
+                <span class="scanner-sensor right"></span>
+                <i></i>
+              </div>
+              <span class="diagram-label label-range">RANGO 100 M</span>
+              <span class="diagram-label label-lidar">LiDAR</span>
+              <span class="diagram-index">360°</span>
+            </div>
+
+            <div class="card-body">
+              <div class="title-row">
+                <span class="title-icon">
+                  <Icon name="scan" size={21} />
+                </span>
+                <div>
+                  <span>Escáner láser profesional</span>
+                  <h3>Matterport Pro3</h3>
+                </div>
+              </div>
+
+              <p class="card-description">
+                Captura espacial rápida y precisa en interiores y exteriores,
+                preparada para recorridos virtuales inmersivos y nubes de puntos densas.
+              </p>
+
+              <ul class="feature-list">
+                <li>
+                  <Icon name="check" size={16} />
+                  Precisión dimensional de grado industrial
+                </li>
+                <li>
+                  <Icon name="check" size={16} />
+                  Escaneo LiDAR sin marcadores hasta 100 m
+                </li>
+                <li>
+                  <Icon name="check" size={16} />
+                  Tours virtuales 4K listos para inspección remota
+                </li>
+              </ul>
+
+              <div class="spec-badges">
+                <span>
+                  <small>PRECISIÓN</small>
+                  ±20 mm
+                </span>
+                <span>
+                  <small>CAPTURA</small>
+                  &lt; 1 min
+                </span>
+                <span>
+                  <small>OPERACIÓN</small>
+                  IN / OUT
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2: Software / AutoCAD Plant 3D -->
+          <article class="tech-card software-card">
+            <div class="card-code">
+              <span>SOFTWARE / 02</span>
+              <b>MODELADO</b>
+            </div>
+
+            <div class="tech-visual cad-visual" aria-hidden="true">
+              <div class="cad-grid"></div>
+              <div class="pipe pipe-a"></div>
+              <div class="pipe pipe-b"></div>
+              <div class="pipe pipe-c"></div>
+              <div class="pipe-node node-a"></div>
+              <div class="pipe-node node-b"></div>
+              <div class="pipe-node node-c"></div>
+              <div class="cad-frame frame-a"></div>
+              <div class="cad-frame frame-b"></div>
+              <span class="diagram-label cad-label-a">ISO–P104</span>
+              <span class="diagram-label cad-label-b">DN 150</span>
+              <span class="diagram-index">DWG</span>
+            </div>
+
+            <div class="card-body">
+              <div class="title-row">
+                <span class="title-icon">
+                  <Icon name="layers" size={21} />
+                </span>
+                <div>
+                  <span>Ingeniería y documentación</span>
+                  <h3>AutoCAD Plant 3D Workflow</h3>
+                </div>
+              </div>
+
+              <p class="card-description">
+                Transformamos la nube de puntos en documentación inteligente,
+                coordinada y lista para ingeniería de detalle.
+              </p>
+
+              <div class="workflow-list">
+                <span>
+                  <Icon name="route" size={18} />
+                  <b>Modelado de tuberías</b>
+                </span>
+                <span>
+                  <Icon name="cube" size={18} />
+                  <b>Estructura metálica</b>
+                </span>
+                <span>
+                  <Icon name="file" size={18} />
+                  <b>Isométricos</b>
+                </span>
+                <span>
+                  <Icon name="layers" size={18} />
+                  <b>Generación P&amp;ID</b>
+                </span>
+              </div>
+
+              <div class="spec-badges">
+                <span>
+                  <small>ENTREGA</small>
+                  DWG / PDF
+                </span>
+                <span>
+                  <small>MODELO</small>
+                  BIM / CAD
+                </span>
+                <span>
+                  <small>ESTÁNDAR</small>
+                  AS-BUILT
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Cinta de Proceso Técnico -->
+        <div class="process-strip">
+          <span>01 · CAPTURA LÁSER</span>
+          <i></i>
+          <span>02 · REGISTRO DE NUBE</span>
+          <i></i>
+          <span>03 · MODELADO 3D</span>
+          <i></i>
+          <span>04 · DOCUMENTACIÓN</span>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/sections/Navbar.tsx';
+import ShowcaseViewer from '../components/interactive/ShowcaseViewer';
+import Footer from '../components/sections/Footer.astro';
+---
+
+<Layout title="VECTOR | Showcase Interactivo 3D">
+  
+  <Navbar client:load />
+
+  <main class="pt-20">
+    <section class="showcase-section" id="showcase">
+      <!-- Renderizamos la isla interactiva optimizada -->
+      <ShowcaseViewer client:visible />
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
